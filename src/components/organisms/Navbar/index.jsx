@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+        className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark fixed-top"
         data-bs-theme="dark"
       >
         <div className="container">

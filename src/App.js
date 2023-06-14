@@ -1,9 +1,10 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/organisms/Navbar';
-import Footer from './components/organisms/Footer';
+// import Footer from './components/organisms/Footer';
 import Home from './components/pages/Home';
 import Search from './components/pages/Search';
+import Detail from './components/pages/Detail';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/:query" element={<Search />} />
+        <Route path="/detail/:imdbID" element={<Detail />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
