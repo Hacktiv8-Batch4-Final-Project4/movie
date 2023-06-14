@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search/:search" element={<Search />} />
+        <Route path="/search/:query" element={<Search />} />
       </Routes>
       <Footer />
     </BrowserRouter>
