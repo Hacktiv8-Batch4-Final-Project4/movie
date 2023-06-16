@@ -30,7 +30,7 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query) {
-      navigate(`/search/:${query}`);
+      navigate(`/search/${query}`);
       setQuery('');
     } else {
       navigate('/error');
