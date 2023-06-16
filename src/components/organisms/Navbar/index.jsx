@@ -29,8 +29,12 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search/:${query}`);
-    setQuery('');
+    if (query) {
+      navigate(`/search/:${query}`);
+      setQuery('');
+    } else {
+      navigate('/error');
+    }
   };
 
   return (
@@ -43,7 +47,7 @@ const Navbar = () => {
       >
         <div className="container">
           <Link className="navbar-brand" to={'/'}>
-            <img src='logo.png' className='logo'/>
+            <img src="logo.png" className="logo" />
           </Link>
           <button
             className="navbar-toggler"
