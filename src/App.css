@@ -173,7 +173,13 @@ div a, a:hover {
 
 
 .detail-container{
-  margin-top: 20vh;
+  margin-top: 15vh;
 }
 
+.table-container{
+  margin-left: 4%;
+}
 
+footer{
+  background-color: #171D21;
+}
