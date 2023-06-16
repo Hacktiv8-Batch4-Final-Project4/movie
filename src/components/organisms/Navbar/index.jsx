@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
   let navigate = useNavigate();
   const [query, setQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
@@ -19,12 +36,14 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+        className={`navbar navbar-expand-lg ${
+          isScrolled ? 'navbar-scrolled' : ''
+        }`}
         data-bs-theme="dark"
       >
         <div className="container">
           <Link className="navbar-brand" to={'/'}>
-            Navbar
+            <img src='logo.png' className='logo'/>
           </Link>
           <button
             className="navbar-toggler"
@@ -42,12 +61,12 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   className={
-                    'nav-link' + (location.pathname === '/' ? ' active' : ' ')
+                    'nav-link' + (location.pathname === '/' ? ' active' : '')
                   }
                   aria-current="page"
                   to={'/'}
                 >
-                  Home
+                  HOME
                 </Link>
               </li>
             </ul>
@@ -60,7 +79,7 @@ const Navbar = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-warning" type="submit">
                 Search
               </button>
             </form>
