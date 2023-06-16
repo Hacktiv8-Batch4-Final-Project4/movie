@@ -23,7 +23,7 @@ const Detail = () => {
             <span className='visually-hidden'>Loading...</span>
             </div>
         ) : (
-          <div>
+          <div className='detail-container text-white'>
             <img src={detail.detail.Poster} alt={detail.detail.Title} />
             <h1>Title: {detail.detail.Title}</h1>
             <p>Tahun: {detail.detail.Year}</p>

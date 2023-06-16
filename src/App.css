@@ -24,6 +24,40 @@
   color: white;
 }
 
+.logo{
+  width: 8em;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  z-index: 999;
+  
+}
+
+.nav-item{
+  font-weight: bold;
+}
+
+.navbar-scrolled {
+  background-color: #171D21;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .title{
+  color: white; 
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+} */
+
+#root{
+  background-color: #110F1A;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +70,110 @@
     transform: rotate(360deg);
   }
 }
+
+/* div.card-body {
+  padding: 0.5em;
+  margin-top: 1em;  
+  margin-bottom: 2em;
+}
+
+div.card-body {
+  font-weight: normal;
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+
+
+div a:hover {
+  opacity: 0.8;
+}  */
+
+/* 
+
+
+/* .card-title {
+  color: var(--white);
+  font-size: var(--fs-7);
+  transition: var(--transition-1);
+} */
+
+/* .card-title:is(:hover, :focus) { color: var(--citrine); } */
+
+div a, a:hover {
+  text-decoration: none;
+
+}
+.card-title {
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  justify-content: center;
+}
+
+/* .card-title:hover {
+  color: #ffc107;
+} */
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0);
+  border: 8px solid #171D21;
+  overflow: hidden;
+  border-radius: 15px;
+  color: white;
+}
+
+
+
+/* .card .card-text{
+  line-height: 25px;
+  margin: 40px 0;
+} */
+
+.card .card-title {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .card-text {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+}
+
+.card-body{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #171d219d;
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  right: -100%;
+  transition: 0.5s;
+}
+
+.card:hover .card-body{
+  right: 0;
+}
+
+
+.detail-container{
+  margin-top: 15vh;
+}
+
+
